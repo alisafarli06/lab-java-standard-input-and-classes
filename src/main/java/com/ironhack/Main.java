@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        Employee[] employees = new Employee[11];
+        Employee[] employees = new Employee[10];
 
         employees[0] = new Employee("Robert King", "robert.king@email.com", 34, 27000);
         employees[1] = new Employee("Laura Scott", "laura.scott@email.com", 29, 21000);
@@ -15,12 +15,14 @@ public class Main {
         employees[4] = new Employee("Brian Nelson", "brian.nelson@email.com", 38, 29000);
         employees[5] = new Employee("Samantha Carter", "samantha.carter@email.com", 30, 24000);
         employees[6] = new Employee("Andrew Mitchell", "andrew.mitchell@email.com", 45, 35000);
-        employees[7] = new Employee("Rachel Perez", "rachel.perez@email.com", 23, 9000);
-        employees[8] = new Employee("Justin Roberts", "justin.roberts@email.com", 33, 26000);
-        employees[9] = new Employee("Megan Phillips", "megan.phillips@email.com", 27, 20000);
-        employees[10]=new Intern("Ali Safarli","alisafarli@gmail.com",20,22000);
+        employees[7] = new Employee("Rachel Perez", "rachel.perez@email.com", 23, 90000);
+        employees[8]=new Intern("Max Safarli","Maxsafarli123@gmail.com",22,2100);
+        employees[9]=new Intern("Ali Safarli","alisafarli@gmail.com",20,22000);
 
-        makeEmployesFile(employees);
+
+
+
+        makeEmployeesFile(employees);
 
     }
 
@@ -34,8 +36,8 @@ public class Main {
                 """, employee.getName(), employee.getEmail(), employee.getAge(), employee.getSalary());
     }
 
-    public static void  makeEmployesFile(Employee[]employees){
-        String fileName = "employes.txt";
+    public static void  makeEmployeesFile(Employee[]employees){
+        String fileName = "employees.txt";
 
         try(FileWriter writer = new FileWriter(fileName)) {
             for (Employee employee : employees) {
@@ -43,6 +45,7 @@ public class Main {
 
                 writer.write(content);
             }
+            System.out.println("New file created successfully.");
         } catch (IOException e) {
             System.err.println("Error writing to file: " + e.getMessage());
         }

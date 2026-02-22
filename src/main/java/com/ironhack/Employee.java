@@ -6,15 +6,14 @@ public class Employee {
     private String email;
     private double salary;
 
-    Employee(String name, String email, int age, double salary) {
-        setName(name);
-        setAge(age);
-        setEmail(email);
-        setSalary(salary);
+   public Employee(String name, String email, int age, double salary) {
+      this.name=name;
+      this.email=email;
+      this.age=age;
+      this.salary=salary;
     }
 
-//    public Employee() {
-//    }
+
 
     public String getName() {
         return name;

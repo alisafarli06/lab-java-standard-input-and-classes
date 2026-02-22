@@ -5,7 +5,8 @@ public class Intern extends Employee {
     private static final double SALARY_LIMIT=20000;
 
     public Intern(String name, String email, int age, double salary) {
-        super(name, email, age, salary);
+        super(name, email, age, 0);
+        setSalary(salary);
     }
 
     @Override
@@ -15,6 +16,6 @@ public class Intern extends Employee {
         return;
         }
 
-        setSalary(salary);
+        super.setSalary(salary);
     }
 }
