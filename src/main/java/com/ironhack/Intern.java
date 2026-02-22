@@ -15,6 +15,6 @@ public class Intern extends Employee {
         return;
         }
 
-        super.setSalary(salary);
+        setSalary(salary);
     }
 }
