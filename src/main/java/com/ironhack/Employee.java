@@ -13,8 +13,8 @@ public class Employee {
         setSalary(salary);
     }
 
-    public Employee() {
-    }
+//    public Employee() {
+//    }
 
     public String getName() {
         return name;

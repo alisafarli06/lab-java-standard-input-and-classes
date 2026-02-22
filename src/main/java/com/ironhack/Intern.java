@@ -11,7 +11,7 @@ public class Intern extends Employee {
     @Override
     public void setSalary(double salary) {
         if(salary>SALARY_LIMIT){
-            System.err.println("Salary must be maximum 2000");
+            System.err.println("Salary must be maximum 20000.0: "+salary);
         return;
         }
 

@@ -1,4 +1,4 @@
-xName: Robert King
+Name: Robert King
 Email: robert.king@email.com
 Age: 34
 Salary: 27000.00
